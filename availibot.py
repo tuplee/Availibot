@@ -46,4 +46,4 @@ async def release(ctx, connection_name: str):
         await ctx.send(f'Invalid RDP connection name.')
 
 # Run the bot
-bot.run('MTIzMjgzMTgxOTQ1NjcxMjcxNA.GYEqMU.2H3kVlX5Z3iUy1StS9YBT4b8kHBMERBMgyAT5I')
+bot.run('BOT_TOKEN')
