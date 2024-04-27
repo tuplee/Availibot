@@ -2,8 +2,9 @@ import discord
 from discord.ext import commands, tasks
 import datetime
 
+#State your intentions and enable message intention
 intents = discord.Intents.all()
-intents.messages = True  # Enable the message content intent
+intents.messages = True
 
 # Initialize bot with intents
 bot = commands.Bot(command_prefix='!', intents=intents)
