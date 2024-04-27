@@ -7,7 +7,6 @@ intents.messages = True  # Enable the message content intent
 # Initialize bot with intents
 bot = commands.Bot(command_prefix='!', intents=intents)
 
-
 # List to store RDP connections and their statuses
 rdp_connections = {'bluestn1': False, 'bluestn2': False, 'purplestn1': False, 'purplestn2': False}
 
@@ -45,5 +44,17 @@ async def release(ctx, connection_name: str):
     else:
         await ctx.send(f'Invalid RDP connection name.')
 
+@bot.command()
+async def help(ctx):
+    help = '''
+    Use Availibot to check available RDP connections and reserve your workstation!
+
+    !connections -> list all RDP connections
+    !use {{bluestn1}} -> reserve the RDP connection
+    !release {{bluestn1}} -> release the RDP reservation')
+    '''
+
+    await ctx.send(help)
+    
 # Run the bot
-bot.run('MTIzMjgzMTgxOTQ1NjcxMjcxNA.GYEqMU.2H3kVlX5Z3iUy1StS9YBT4b8kHBMERBMgyAT5I')
+bot.run('')
