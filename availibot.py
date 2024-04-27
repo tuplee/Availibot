@@ -19,6 +19,12 @@ def reserve_connection(connection_name, user_id):
 def release_connection(connection_name):
     rdp_connections[connection_name] = None
 
+# Command to display available RDP connections
+@bot.command()
+async def connections(ctx):
+    connections_list = '\n'.join([f'{name}: {"In Use" if status else "Available"}' for name, status in rdp_connections.items()])
+    await ctx.send(f'Available RDP connections:\n{connections_list}')
+
 # Command to select and mark an RDP connection as in use
 @bot.command()
 async def use(ctx, connection_name: str):
