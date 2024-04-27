@@ -82,7 +82,7 @@ async def automatic_release():
             reservation_time = reservation_info['timestamp']
             if (now - reservation_time).total_seconds() >= 180 * 60:  # 3 hour timeout
                 release_connection(connection_name)
-                channel = await bot.fetch_channel(1232805368829317211)
+                channel = await bot.fetch_channel()
                 await channel.send(f'{connection_name} has been automatically released due to inactivity.')
 
 # Start automatic release task
@@ -98,4 +98,4 @@ async def start_background_tasks():
     bot.loop.create_task(background_task())
     
 # Run the bot
-bot.run('MTIzMjgzMTgxOTQ1NjcxMjcxNA.Gnvrnp.fJjn2i6MzM117tZdgnOo1Oi16tcSOgZlGsn80o')
+bot.run('')
