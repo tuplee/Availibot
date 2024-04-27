@@ -6,4 +6,4 @@ Using three commands this bot manages a list of RDP connections, allows students
 
 Super basic. This was made as a quick tool to help manage a growing Discord server of cybersecurity students working on their final projects.
 
-Check out AvailibotV2 for a bot that returns the live status of multiple remote workstation RDP ports, bypassing the need for reservations!
+Check out AvailibotV2 for a bot that returns the live status of multiple remote workstation RDP ports, bypassing the need for check-ins!
