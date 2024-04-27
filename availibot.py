@@ -45,7 +45,7 @@ async def release(ctx, connection_name: str):
         await ctx.send(f'Invalid RDP connection name.')
 
 @bot.command()
-async def help(ctx):
+async def whoareyou(ctx):
     help = '''
     Use Availibot to check available RDP connections and reserve your workstation!
 
@@ -54,7 +54,7 @@ async def help(ctx):
     !release {{bluestn1}} -> release the RDP reservation')
     '''
 
-    await ctx.send(help)
+    await ctx.send(whoareyou)
     
 # Run the bot
 bot.run('')
