@@ -2,9 +2,8 @@ import discord
 from discord.ext import commands, tasks
 import datetime
 
-#State your intentions and enable message intention
 intents = discord.Intents.all()
-intents.messages = True
+intents.messages = True  # Enable the message content intent
 
 # Initialize bot with intents
 bot = commands.Bot(command_prefix='!', intents=intents)
@@ -54,15 +53,18 @@ async def extend(ctx):
             return
     await ctx.send('You do not have an active reservation to extend.')
 
+# Command to explain how the bot works
 @bot.command()
 async def whoareyou(ctx):
     help = '''
     Use Availibot to check available RDP connections and reserve your workstation.
-    This is a manual process right now, but there is a 3 hour auto-timeout for check-ins
-    V2 is in development -> https://github.com/tuplee/AvailibotV2
+    This is a manual process right now, but there is a 3 hour auto-timeout for check-ins.
+    V2 is in development for live RDP statuses-> https://github.com/tuplee/AvailibotV2
 
     Workstations To Choose From:
     {{bluestn1, bluestn2, purplestn1, purplestn2}}
+
+    Commands:
     !connections                  -> list all RDP connections
     !use {{workstation_name}}     -> check into the workstation
     !release {{workstation_name}} -> checkout of the workstation)
